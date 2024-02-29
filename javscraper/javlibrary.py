@@ -18,14 +18,7 @@ class JAVLibrary(Base, ABC):
         self._set_date_fmt("%Y-%m-%d")
         self._set_search_xpath("/html/body/div[3]/div[2]/div[2]/div/div[@class='video']/a")
         self._set_video_xpath({
-            "name": self._fix_name,
-            "code": "//div[@id='video_id']/table/tr/td[2]",
-            "studio": "//div[@id='video_maker']/table/tr/td[2]/span/a",
-            "image": self._fix_image,
-            "actresses": "//span[@class='star']/a",
-            "genres": "//span[@class=genre]/a",
-            "release_date": "//div[@id='video_date']/table/tr/td[2]",
-            "score": self._fix_score
+            "genres": "//span[@class='genre']/a",
         })
 
     def _build_search_path(self, query: str) -> str:
