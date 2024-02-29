@@ -23,7 +23,7 @@ class JAVLibrary(Base, ABC):
             "studio": "//div[@id='video_maker']/table/tr/td[2]/span/a",
             "image": self._fix_image,
             "actresses": "//span[@class='star']/a",
-            "genres": "//span[@class='genre']/a",
+            "genres": "//span[@class=genre]/a",
             "release_date": "//div[@id='video_date']/table/tr/td[2]",
             "score": self._fix_score
         })
